@@ -252,8 +252,6 @@ a {
 /* navbar responsive */
 
 /* section hero */
-.site-hero__left {
-}
 
 .site-hero {
   padding: 200px 0px;
@@ -271,6 +269,7 @@ a {
   font-weight: 500;
   line-height: 70px;
   margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .site-hero__left___paragrapgh {
@@ -281,6 +280,7 @@ a {
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 50px;
+  max-width: 100%;
 }
 
 .site-hero__left__btn {
