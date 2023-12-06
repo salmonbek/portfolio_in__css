@@ -1,0 +1,311 @@
+/* container */
+.container {
+  max-width: 1090px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/* container */
+
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v28-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/rubik-v28-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/rubik-v28-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik-v28-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik-v28-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* common  */
+
+body {
+  font-family: "'Rubik'";
+}
+
+ul {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* common */
+
+/* css boilerplit */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* css boilerplit */
+
+/* variables */
+
+:root {
+  --primary: #f53838;
+  --black: #0b132a;
+  --textParagraph: #4f5665;
+}
+
+/* variables */
+
+/* navigation section */
+.header {
+  padding: 50px 0px;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+}
+
+.navbar {
+  width: 100%;
+  z-index: 1;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+.nav-list__link {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-list__link1 {
+  color: var(--black);
+}
+
+.nav-list__link1:hover {
+  padding: 13px 45px;
+  border-radius: 50px;
+  border: 1px solid #f53855;
+  width: 150px;
+  transition: 0.2s;
+}
+.nav-list__links {
+  padding: 13px 45px;
+  border-radius: 50px;
+  border: 1px solid #f53855;
+  width: 150px;
+  color: var(--primary);
+}
+.menu {
+  display: none;
+}
+@media (max-width: 1080px) {
+  .hero-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 850px) {
+  .nav-list {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+    background: transparent;
+    width: 50px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .nav-list__link {
+    display: none;
+  }
+  .site-hero__left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .site-hero__left__title {
+    font-size: 30px;
+  }
+  .site-hero__right {
+  }
+}
+@media (max-width: 450px) {
+  .site-hero__left__btn {
+  }
+}
+/* navigation section */
+
+/* navbar responsive */
+#navbar-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  background-color: red;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#navbar-responsive {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+}
+.navbar-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--black);
+  cursor: pointer;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.navbar-link:hover {
+  transition: all 0.4s;
+  border: 1px solid black;
+  padding: 10px 30px;
+  border-radius: 7px;
+  background-color: aqua;
+  box-shadow: 3px 3pxaqua;
+  border: none;
+}
+
+.navbar-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.navbar-list__links {
+  margin-top: 30px;
+  color: var(--primary);
+  width: 150px;
+  padding: 13px 45px;
+  border-radius: 50px;
+  border: 1px solid #f53855;
+}
+
+.navbar-list__link1:hover {
+  padding: 13px 45px;
+  border-radius: 50px;
+  border: 1px solid #f53855;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+/* navbar responsive */
+
+/* section hero */
+.site-hero__left {
+}
+
+.site-hero {
+  padding: 200px 0px;
+}
+.hero-section {
+  display: flex;
+  gap: 40px;
+}
+
+.site-hero__left__title {
+  width: 555px;
+  color: var(--black);
+  font-family: "Rubik";
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+
+.site-hero__left___paragrapgh {
+  width: 555px;
+  color: #4f5665;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.site-hero__left__btn {
+  color: #fff;
+  padding: 17px 77px;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  border: none;
+  width: 300px;
+  border-radius: 10px;
+  max-width: 100%;
+  background: var(--primary);
+}
+
+.site-hero__left__btn:hover {
+  border: 2px solid red;
+  background: white;
+  color: var(--black);
+  transition: 0.5s;
+}
+
+.site-hero__right img {
+  max-width: 100%;
+}
+
+/* section hero */
